@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AppDev/ConvertifyApp2/app/src/main/res/drawable/img_bg.xml" value="0.1475" />
         <entry key="..\:/AppDev/ConvertifyApp2/app/src/main/res/drawable/radio_normal.xml" value="0.1475" />
         <entry key="..\:/AppDev/ConvertifyApp2/app/src/main/res/drawable/radio_selctor.xml" value="0.1" />
         <entry key="..\:/AppDev/ConvertifyApp2/app/src/main/res/drawable/radio_selected.xml" value="0.1475" />
-        <entry key="..\:/AppDev/ConvertifyApp2/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/AppDev/ConvertifyApp2/app/src/main/res/layout/activity_main.xml" value="0.16574074074074074" />
+        <entry key="..\:/AppDev/ConvertifyApp2/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
       </map>
     </option>
   </component>
