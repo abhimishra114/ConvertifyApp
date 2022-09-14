@@ -32,4 +32,16 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
+    // This function checks if the string is in Octal form or not
+    fun isOctal(string: String): Boolean{
+        val n = string.length
+        for (i in 0 until n){
+            val ch = string[i]
+            if(ch > '7'){
+                return false
+            }
+        }
+        return true
+    }
+    
 }
