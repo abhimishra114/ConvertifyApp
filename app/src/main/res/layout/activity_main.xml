@@ -192,6 +192,7 @@
         android:fontFamily="@font/source_code_pro"
         android:gravity="center"
         android:hint="Input Text"
+        android:inputType="textCapCharacters"
         android:textColor="@color/white"
         android:textColorHint="@color/white_op"
         app:layout_constraintEnd_toEndOf="parent"
