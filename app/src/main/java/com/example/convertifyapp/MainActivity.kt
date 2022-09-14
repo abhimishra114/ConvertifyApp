@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val n = string.length
         for (i in 0 until n){
             val ch = string[i]
-            if(ch != '0' || ch != '1'){
+            if(ch != '0' && ch != '1'){
                 return false
             }
         }
