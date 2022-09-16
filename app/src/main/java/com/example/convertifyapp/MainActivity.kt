@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         val enterText: TextView = findViewById(R.id.enter_textView)
         val inputText: EditText = findViewById(R.id.edit_text)
         val outputText: TextView = findViewById(R.id.textView_2)
-        var output:TextView = findViewById(R.id.output)
+        val output:TextView = findViewById(R.id.output)
         val convert:Button = findViewById(R.id.convert_button)
         val reset:Button = findViewById(R.id.reset_button)
 
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
         // This changes the output text view according to the radio button selected
         radioGroup2.setOnCheckedChangeListener { _, i ->
-            var rb: RadioButton = findViewById(i)
+            val rb: RadioButton = findViewById(i)
             if (rb.id == R.id.binary_2){
                 outputText.text = "Binary: "
             }
@@ -56,16 +56,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // initialising buttons of the left side
-        var fb1:RadioButton = findViewById(R.id.binary_1)
-        var fb2:RadioButton = findViewById(R.id.decimal_1)
-        var fb3:RadioButton = findViewById(R.id.octal_1)
-        var fb4:RadioButton = findViewById(R.id.hex_1)
+        val fb1:RadioButton = findViewById(R.id.binary_1)
+        val fb2:RadioButton = findViewById(R.id.decimal_1)
+        val fb3:RadioButton = findViewById(R.id.octal_1)
+        val fb4:RadioButton = findViewById(R.id.hex_1)
 
         // initialising buttons of the right side
-        var tb1:RadioButton = findViewById(R.id.binary_2)
-        var tb2:RadioButton = findViewById(R.id.decimal_2)
-        var tb3:RadioButton = findViewById(R.id.octal_2)
-        var tb4:RadioButton = findViewById(R.id.hex_2)
+        val tb1:RadioButton = findViewById(R.id.binary_2)
+        val tb2:RadioButton = findViewById(R.id.decimal_2)
+        val tb3:RadioButton = findViewById(R.id.octal_2)
+        val tb4:RadioButton = findViewById(R.id.hex_2)
 
         // This code gives functionality to the reset button
         reset.setOnClickListener {

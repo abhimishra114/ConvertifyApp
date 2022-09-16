@@ -9,11 +9,10 @@
 
     <ImageView
         android:id="@+id/SplashScreenImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/calc_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/convertify_logo"
         android:elevation="5dp"
-        android:background="@drawable/img_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
