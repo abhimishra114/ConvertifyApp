@@ -160,5 +160,19 @@ class MainActivity : AppCompatActivity() {
         val i = Integer.parseInt(str)
         return Integer.toHexString(i).uppercase()
     }
-
+    // octal to decimal
+    fun octalToDecimal(str: String):String{
+        val i = Integer.parseInt(str,8)
+        return Integer.toString(i)
+    }
+    // octal to binary
+    fun octalToBinary(str: String):String{
+        val i = Integer.parseInt(decimalToBinary(octalToDecimal(str)))
+        return Integer.toString(i)
+    }
+    // octal to hexadecimal
+//    fun octalToHexadecimal(str: String):String{
+//        val i = Integer.parseInt(decimalToHexadecimal(octalToDecimal(str)))
+//        return Integer.toString(i)
+//    }
 }
