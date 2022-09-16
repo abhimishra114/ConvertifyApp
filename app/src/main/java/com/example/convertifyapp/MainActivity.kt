@@ -82,7 +82,139 @@ class MainActivity : AppCompatActivity() {
             enterText.text = ""
             outputText.text = ""
             inputText.setText("")
+            output.text = ""
 
+        }
+
+        convert.setOnClickListener {
+            // binary -> binary
+            if (fb1.isChecked && tb1.isChecked){
+                if (isBinary(inputText.text.toString())){
+                    output.text = inputText.text
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // binary -> decimal
+            if (fb1.isChecked && tb2.isChecked){
+                if (isBinary(inputText.text.toString())){
+                    output.text = binaryToDecimal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // binary -> octal
+            if (fb1.isChecked && tb3.isChecked){
+                if (isBinary(inputText.text.toString())){
+                    output.text = binaryToOctal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // binary -> hex
+            if (fb1.isChecked && tb4.isChecked){
+                if (isBinary(inputText.text.toString())){
+                    output.text = binaryToHexadecimal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // decimal -> binary
+            if (fb2.isChecked && tb1.isChecked){
+                if (isDecimal(inputText.text.toString())){
+                    output.text = decimalToBinary(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // decimal -> decimal
+            if (fb2.isChecked && tb2.isChecked){
+                if (isDecimal(inputText.text.toString())){
+                    output.text = inputText.text
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // decimal -> octal
+            if (fb2.isChecked && tb3.isChecked){
+                if (isDecimal(inputText.text.toString())){
+                    output.text = decimalToOctal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // decimal -> hex
+            if (fb2.isChecked && tb4.isChecked){
+                if (isDecimal(inputText.text.toString())){
+                    output.text = decimalToHexadecimal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // octal -> binary
+            if (fb3.isChecked && tb1.isChecked){
+                if (isOctal(inputText.text.toString())){
+                    output.text = octalToBinary(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // octal -> decimal
+            if (fb3.isChecked && tb2.isChecked){
+                if (isOctal(inputText.text.toString())){
+                    output.text = octalToDecimal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // octal -> octal
+            if (fb3.isChecked && tb3.isChecked){
+                if (isOctal(inputText.text.toString())){
+                    output.text = inputText.text
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // octal -> hex
+            if (fb3.isChecked && tb4.isChecked){
+                if (isOctal(inputText.text.toString())){
+                    output.text = octalToHexadecimal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // hex -> binary
+            if (fb4.isChecked && tb1.isChecked){
+                if (isHex(inputText.text.toString())){
+                    output.text = hexadecimalToBinary(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // hex -> decimal
+            if (fb4.isChecked && tb2.isChecked){
+                if (isHex(inputText.text.toString())){
+                    output.text = hexadecimalToDecimal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // hex -> octal
+            if (fb4.isChecked && tb3.isChecked){
+                if (isHex(inputText.text.toString())){
+                    output.text = hexadecimalToOctal(inputText.text.toString())
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
+            // hex -> hex
+            if (fb4.isChecked && tb3.isChecked){
+                if (isHex(inputText.text.toString())){
+                    output.text = inputText.text
+                }else{
+                    Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
     // This function checks the string is in Hexadecimal form or not
@@ -171,8 +303,23 @@ class MainActivity : AppCompatActivity() {
         return Integer.toString(i)
     }
     // octal to hexadecimal
-//    fun octalToHexadecimal(str: String):String{
-//        val i = Integer.parseInt(decimalToHexadecimal(octalToDecimal(str)))
-//        return Integer.toString(i)
-//    }
+    fun octalToHexadecimal(str: String):String{
+        val i = Integer.parseInt(octalToDecimal(str))
+        return Integer.toHexString(i).uppercase()
+    }
+    // hexadecimal to binary
+    fun hexadecimalToBinary(str: String):String{
+        val i = Integer.parseInt(str,16)
+        return Integer.toBinaryString(i)
+    }
+    // hexadecimal to decimal
+    fun hexadecimalToDecimal(str:String):String{
+        val i = Integer.parseInt(str,16)
+        return Integer.toString(i)
+    }
+    // hexadecimal to octal
+    fun hexadecimalToOctal(str: String):String{
+        val i = Integer.parseInt(str,16)
+        return Integer.toOctalString(i)
+    }
 }
