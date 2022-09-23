@@ -1,5 +1,7 @@
 package com.example.convertifyapp
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
@@ -84,7 +86,6 @@ class MainActivity : AppCompatActivity() {
             inputText.setText("")
             output.text = ""
         }
-
         convert.setOnClickListener {
             // binary -> binary
             if (fb1.isChecked && tb1.isChecked){
@@ -214,6 +215,13 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext,"Enter Valid Input",Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+
+        // This opens the link on clicking
+        val git:TextView = findViewById(R.id.git)
+        git.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/abhimishra114"))
+            startActivity(intent)
         }
     }
     // This function checks the string is in Hexadecimal form or not

@@ -275,7 +275,7 @@
         android:layout_height="wrap_content"
         android:text="github.com/abhimishra114"
         android:textStyle="italic"
-        android:textColor="@color/white_op"
+        android:textColor="@color/teal_200"
         android:layout_marginTop="-30dp"
         android:fontFamily="@font/source_code_pro"
         app:layout_constraintStart_toStartOf="parent"
